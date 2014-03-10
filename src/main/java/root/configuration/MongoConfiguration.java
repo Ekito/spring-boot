@@ -14,7 +14,7 @@ import com.mongodb.MongoClient;
 public class MongoConfiguration {
   
   public @Bean MongoDbFactory mongoDbFactory() throws Exception {
-	  UserCredentials userCredentials = new UserCredentials("heroku_app22732496", "");
+	  UserCredentials userCredentials = new UserCredentials("heroku_app22732496", "heroku_app22732496");
     return new SimpleMongoDbFactory(new MongoClient(), "heroku_app22732496", userCredentials);
   }
 
