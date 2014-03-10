@@ -13,7 +13,7 @@ import com.mongodb.MongoClient;
 public class MongoConfiguration {
   
   public @Bean MongoDbFactory mongoDbFactory() throws Exception {
-    return new SimpleMongoDbFactory(new MongoClient(), "uspopulation");
+    return new SimpleMongoDbFactory(new MongoClient(), "heroku_app22732496");
   }
 
   public @Bean MongoTemplate mongoTemplate() throws Exception {

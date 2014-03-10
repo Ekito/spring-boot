@@ -18,7 +18,7 @@ import root.domain.City;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Application.class, loader=SpringApplicationContextLoader.class)
-public class ApplicationTests {
+public class ApplicationTests {	
 	
 	@Autowired
 	public MongoTemplate mongoTemplate;
