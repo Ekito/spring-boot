@@ -19,7 +19,7 @@ public class MongoConfiguration {
 	  UserCredentials userCredentials = new UserCredentials("dimitri", "dimitri31");
 
 	  Mongo mongoClient = new MongoClient(
-			    new ServerAddress("localhost", 31319)); 
+			    new ServerAddress("ds031319.mongolab.com", 31319)); 
 	  
     return new SimpleMongoDbFactory(mongoClient, "heroku_app22732496", userCredentials);
   }
