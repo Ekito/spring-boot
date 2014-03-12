@@ -7,7 +7,9 @@ import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
+import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
+import com.mongodb.ServerAddress;
 
 
 @Configuration
@@ -15,7 +17,11 @@ public class MongoConfiguration {
   
   public @Bean MongoDbFactory mongoDbFactory() throws Exception {
 	  UserCredentials userCredentials = new UserCredentials("dimitri", "dimitri31");
-    return new SimpleMongoDbFactory(new MongoClient(), "heroku_app22732496", userCredentials);
+
+	  Mongo mongoClient = new MongoClient(
+			    new ServerAddress("localhost", 31319)); 
+	  
+    return new SimpleMongoDbFactory(mongoClient, "heroku_app22732496", userCredentials);
   }
 
   public @Bean MongoTemplate mongoTemplate() throws Exception {
