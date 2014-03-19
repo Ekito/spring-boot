@@ -26,5 +26,4 @@ public class CityRepositoryImpl implements CityRepositoryCustom {
 
 		return cities;
 	}
-
 }

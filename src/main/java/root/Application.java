@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableAutoConfiguration
 public class Application {
 	public static void main(String[] args) throws Exception {
+		// le port sur heroku est aléaoire
         String webPort = System.getenv("PORT");
         if (webPort == null || webPort.isEmpty()) {
             webPort = "8080";

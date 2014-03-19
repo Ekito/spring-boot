@@ -24,6 +24,4 @@ public class CityController {
 		
 		return cityRepo.findCityLike(name);
 	}
-
-
 }
