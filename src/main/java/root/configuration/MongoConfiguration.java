@@ -18,14 +18,14 @@ public class MongoConfiguration {
   public @Bean MongoDbFactory mongoDbFactory() throws Exception {
 	  UserCredentials userCredentials = new UserCredentials("dimitri", "let'srock69");
 
-//	  Mongo mongoClient = new MongoClient(
-//			    new ServerAddress("ds031319.mongolab.com", 31319)); 
-	  
 	  Mongo mongoClient = new MongoClient(
-			    new ServerAddress("localhost", 27017)); 
+			    new ServerAddress("ds031319.mongolab.com", 31319)); 
 	  
-//    return new SimpleMongoDbFactory(mongoClient, "heroku_app22732496", userCredentials);
-	  return new SimpleMongoDbFactory(mongoClient, "uspopulation");
+	  /*Mongo mongoClient = new MongoClient(
+			    new ServerAddress("localhost", 27017)); */
+	  
+    return new SimpleMongoDbFactory(mongoClient, "heroku_app22732496", userCredentials);
+//	  return new SimpleMongoDbFactory(mongoClient, "uspopulation");
   }
 
   public @Bean MongoTemplate mongoTemplate() throws Exception {
