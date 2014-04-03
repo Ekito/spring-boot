@@ -18,7 +18,7 @@ public class CityController {
 	@Autowired
 	private CityRepository cityRepo;
 	
-	@RequestMapping(value = "/v1/springboot/city/{name}", method = RequestMethod.GET)
+	@RequestMapping(value = "/v1/cities/{name}", method = RequestMethod.GET)
 	public @ResponseBody
 	List<City> findCitiesByName(@PathVariable("name") String name) {
 		
